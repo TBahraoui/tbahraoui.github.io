@@ -1,143 +1,429 @@
-The reason the page looked cumbersome and messy is that Jekyll does not format
-Markdown symbols (#, ###, *, **) cleanly inside an .html file—it treats them as
-raw plain text and dumps everything together without proper spacing or structure
-[1].
+The reason the website looks dated and cumbersome is because the Academic Pages
+template is from 2016—it forces an oversized left-hand sidebar, awkward
+navigation bars, and clumsy spacing that feels like an old wiki.
 
-Here is a clean, organized, and professionally styled index.html. It uses proper
-HTML and the built-in components of your Academic Pages theme (cards, research
-pill badges, and publication buttons) so everything is neat and visually
-separated.
+To get a clean, modern, Ivy League / tech-grade academic portfolio, we can
+bypass that clunky template completely by adding layout: null at the top of your
+index.html.
 
-Step: Replace index.html with this organized version
+This gives you a custom, modern design featuring:
 
-1.  Go to your repository on GitHub:
+  - Clean, modern typography (Inter font).
+  - A polished hero card with your profile, affiliation, and quick-access
+    buttons (Google Scholar, ResearchGate, GitHub, Email).
+  - Clean research cards with subtle hover states.
+  - An organized publication list with badges for co-authors, journals, and
+    paper links.
+  - 100% mobile responsive and fast loading.
+
+Step: Replace index.html
+
+1.  Open your repository on GitHub:
     https://github.com/tbahraoui/tbahraoui.github.io
 2.  On branch tt, click on index.html.
 3.  Click the Pencil icon (Edit this file).
-4.  Replace everything with this code:
+4.  Delete everything and paste this code:
 
 ---
-layout: single
-author_profile: true
-permalink: /
+layout: null
 ---
-
-<div style="font-family: inherit; line-height: 1.6;">
-
-  <!-- Hero / Introduction -->
-  <div style="background: rgba(0,0,0,0.03); border-left: 4px solid #2b7489; padding: 15px 20px; border-radius: 4px; margin-bottom: 25px;">
-    <h2 style="margin-top: 0; color: #2b7489;">About Me</h2>
-    <p style="margin-bottom: 0;">
-      I am a mathematical statistician with a Ph.D. from <strong>Université de Sherbrooke</strong>, Québec, Canada. 
-      My research focuses on developing robust nonparametric and semiparametric inference techniques for complex multivariate data, with applications across risk modeling, econometrics, and data science.
-    </p>
-  </div>
-
-  <!-- Research Interests (Pills / Badges) -->
-  <h3 style="border-bottom: 2px solid #eaecef; padding-bottom: 8px; margin-top: 30px;">
-    <i class="fa fa-search"></i> Research Interests
-  </h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Tarik Bahraoui | Mathematical Statistics</title>
+  <meta name="description" content="Research portfolio of Dr. Tarik Bahraoui, Université de Sherbrooke. Specializing in Copula Theory, Extreme Value Theory, and Statistical Inference.">
   
-  <div style="display: flex; flex-wrap: wrap; gap: 8px; margin: 15px 0 25px 0;">
-    <span style="background: #e1f5fe; color: #0277bd; padding: 6px 14px; border-radius: 20px; font-weight: 500; font-size: 0.9em;">Dependence Modeling & Copulas</span>
-    <span style="background: #e8f5e9; color: #2e7d32; padding: 6px 14px; border-radius: 20px; font-weight: 500; font-size: 0.9em;">Extreme Value Theory</span>
-    <span style="background: #f3e5f5; color: #7b1fa2; padding: 6px 14px; border-radius: 20px; font-weight: 500; font-size: 0.9em;">Empirical Process Theory</span>
-    <span style="background: #fff3e0; color: #e65100; padding: 6px 14px; border-radius: 20px; font-weight: 500; font-size: 0.9em;">Multivariate Time Series</span>
-    <span style="background: #ede7f6; color: #4527a0; padding: 6px 14px; border-radius: 20px; font-weight: 500; font-size: 0.9em;">Statistical Machine Learning</span>
+  <!-- Modern Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f8fafc;
+      --surface-border: #e2e8f0;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-light: #64748b;
+      --primary: #0284c7;
+      --primary-hover: #0369a1;
+      --primary-soft: #e0f2fe;
+      --accent: #0f766e;
+      --radius: 12px;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #fafbfc;
+      color: var(--text-main);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 50px 24px 80px 24px;
+    }
+
+    /* Header Profile Card */
+    .profile-card {
+      background: var(--bg);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius);
+      padding: 36px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .profile-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .name-title h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
+    }
+
+    .name-title p.affiliation {
+      font-size: 1.05rem;
+      color: var(--primary);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    .name-title p.sub {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Links / Buttons */
+    .links-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface);
+      color: var(--text-muted);
+      border: 1px solid var(--surface-border);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+
+    .btn:hover {
+      background: var(--bg);
+      color: var(--text-main);
+      border-color: #cbd5e1;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      color: #fff;
+    }
+
+    /* Section Titles */
+    h2.section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--text-main);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2.section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--surface-border);
+    }
+
+    /* About Section */
+    .about-text {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      line-height: 1.75;
+      margin-bottom: 40px;
+    }
+
+    /* Research Cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      margin-bottom: 45px;
+    }
+
+    .card {
+      background: var(--bg);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius);
+      padding: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: #cbd5e1;
+    }
+
+    .card h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Publication List */
+    .publication-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 45px;
+    }
+
+    .pub-card {
+      background: var(--bg);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius);
+      padding: 22px;
+      transition: border-color 0.15s ease;
+    }
+
+    .pub-card:hover {
+      border-color: #94a3b8;
+    }
+
+    .pub-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.45;
+      margin-bottom: 6px;
+    }
+
+    .pub-authors {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .pub-authors strong {
+      color: var(--text-main);
+    }
+
+    .pub-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+    }
+
+    .pub-journal {
+      font-style: italic;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    .pub-badge {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      padding: 2px 8px;
+      border-radius: 4px;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid var(--surface-border);
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+
+    svg {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Top Profile Box -->
+    <header class="profile-card">
+      <div class="profile-header">
+        <div class="name-title">
+          <h1>Dr. Tarik Bahraoui</h1>
+          <p class="affiliation">Researcher in Mathematical Statistics</p>
+          <p class="sub">Université de Sherbrooke · Québec, Canada</p>
+        </div>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="links-bar">
+        <a href="mailto:Tarik.bahraoui@gmail.com" class="btn btn-primary">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Email Me
+        </a>
+        <a href="https://scholar.google.com/citations?user=CPCMPW0AAAAJ&hl=en" target="_blank" class="btn">
+          <svg viewBox="0 0 24 24"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4 3.18v6.82h3v-4.48L12 19l8-6.36V7.48L12 0z"/></svg>
+          Google Scholar
+        </a>
+        <a href="https://www.researchgate.net/profile/Tarik-Bahraoui" target="_blank" class="btn">
+          <svg viewBox="0 0 24 24"><path d="M19.54 0c1.356 0 2.46 1.104 2.46 2.472v21.528l-5.69-3.08-5.688 3.08V2.472C10.622 1.104 11.726 0 13.082 0h6.458z"/></svg>
+          ResearchGate
+        </a>
+        <a href="https://github.com/tbahraoui" target="_blank" class="btn">
+          <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </header>
+
+    <!-- About Me -->
+    <section>
+      <h2 class="section-title">Overview</h2>
+      <p class="about-text">
+        I hold a Ph.D. in Mathematics and Statistics from <strong>Université de Sherbrooke</strong>. My work focuses on mathematical statistics, specifically the development of semiparametric and nonparametric testing methodologies, multivariate dependence structures, and limit theorems for complex stochastic processes. I regularly publish in leading international statistics journals including the <em>Journal of Multivariate Analysis</em> and the <em>Scandinavian Journal of Statistics</em>.
+      </p>
+    </section>
+
+    <!-- Research Areas -->
+    <section>
+      <h2 class="section-title">Research Focus Areas</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Copulas & Dependence</h3>
+          <p>Multivariate copula exchangeability, Bernstein copulas, radial symmetry tests, and directional asymmetry modeling.</p>
+        </div>
+        <div class="card">
+          <h3>Extreme Value Theory</h3>
+          <p>Tail copula characteristic functions (TCCF), extremal dependence indices, and asymptotic properties of extreme joint events.</p>
+        </div>
+        <div class="card">
+          <h3>Time Series & ML</h3>
+          <p>Nonparametric change-point detection in dependent multivariate time series using pseudo-observations and rank statistics.</p>
+        </div>
+        <div class="card">
+          <h3>Empirical Process Theory</h3>
+          <p>Degenerate U- and V-statistics, functional central limit theorems, and multiplier bootstrap validation for weak dependence.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section>
+      <h2 class="section-title">Selected Publications</h2>
+      <div class="publication-list">
+
+        <div class="pub-card">
+          <div class="pub-title">Change-point problems for multivariate time series using pseudo-observations</div>
+          <div class="pub-authors">B. R. Nasri, B. Rémillard, <strong>T. Bahraoui</strong></div>
+          <div class="pub-meta">
+            <span class="pub-journal">Journal of Multivariate Analysis</span>
+            <span class="pub-badge">2022</span>
+            <span class="pub-badge">Methodology</span>
+          </div>
+        </div>
+
+        <div class="pub-card">
+          <div class="pub-title">Tests of multivariate copula exchangeability based on Lévy measures</div>
+          <div class="pub-authors"><strong>T. Bahraoui</strong>, J.-F. Quessy</div>
+          <div class="pub-meta">
+            <span class="pub-journal">Scandinavian Journal of Statistics</span>
+            <span class="pub-badge">2021</span>
+            <span class="pub-badge">Copula Theory</span>
+          </div>
+        </div>
+
+        <div class="pub-card">
+          <div class="pub-title">New Measure of the Bivariate Asymmetry</div>
+          <div class="pub-authors"><strong>T. Bahraoui</strong>, N. Kolev</div>
+          <div class="pub-meta">
+            <span class="pub-journal">Sankhya: The Indian Journal of Statistics (Series A)</span>
+            <span class="pub-badge">2020</span>
+            <span class="pub-badge">Bivariate Analysis</span>
+          </div>
+        </div>
+
+        <div class="pub-card">
+          <div class="pub-title">Tests of radial symmetry for multivariate copulas based on the copula characteristic function</div>
+          <div class="pub-authors"><strong>T. Bahraoui</strong>, J.-F. Quessy</div>
+          <div class="pub-meta">
+            <span class="pub-journal">Electronic Journal of Statistics</span>
+            <span class="pub-badge">2017</span>
+            <span class="pub-badge">Hypothesis Testing</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2026 Dr. Tarik Bahraoui · Hosted on GitHub Pages · Sherbrooke, QC</p>
+    </footer>
+
   </div>
 
-  <!-- Selected Publications Cards -->
-  <h3 style="border-bottom: 2px solid #eaecef; padding-bottom: 8px; margin-top: 35px;">
-    <i class="fa fa-book"></i> Selected Publications
-  </h3>
+</body>
+</html>
 
-  <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 15px;">
-
-    <!-- Publication 1 -->
-    <div style="border: 1px solid #e1e4e8; border-radius: 8px; padding: 16px; background-color: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
-      <div style="font-weight: 600; font-size: 1.05em; color: #0366d6;">
-        Change-point problems for multivariate time series using pseudo-observations
-      </div>
-      <div style="color: #586069; font-size: 0.9em; margin: 4px 0;">
-        B. R. Nasri, B. Rémillard, <strong>T. Bahraoui</strong>
-      </div>
-      <div style="font-style: italic; color: #24292e; font-size: 0.9em;">
-        Journal of Multivariate Analysis (2022)
-      </div>
-    </div>
-
-    <!-- Publication 2 -->
-    <div style="border: 1px solid #e1e4e8; border-radius: 8px; padding: 16px; background-color: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
-      <div style="font-weight: 600; font-size: 1.05em; color: #0366d6;">
-        Tests of multivariate copula exchangeability based on Lévy measures
-      </div>
-      <div style="color: #586069; font-size: 0.9em; margin: 4px 0;">
-        <strong>T. Bahraoui</strong>, J.-F. Quessy
-      </div>
-      <div style="font-style: italic; color: #24292e; font-size: 0.9em;">
-        Scandinavian Journal of Statistics (2021)
-      </div>
-    </div>
-
-    <!-- Publication 3 -->
-    <div style="border: 1px solid #e1e4e8; border-radius: 8px; padding: 16px; background-color: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
-      <div style="font-weight: 600; font-size: 1.05em; color: #0366d6;">
-        New Measure of the Bivariate Asymmetry
-      </div>
-      <div style="color: #586069; font-size: 0.9em; margin: 4px 0;">
-        <strong>T. Bahraoui</strong>, N. Kolev
-      </div>
-      <div style="font-style: italic; color: #24292e; font-size: 0.9em;">
-        Sankhya: The Indian Journal of Statistics, Series A (2020)
-      </div>
-    </div>
-
-    <!-- Publication 4 -->
-    <div style="border: 1px solid #e1e4e8; border-radius: 8px; padding: 16px; background-color: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
-      <div style="font-weight: 600; font-size: 1.05em; color: #0366d6;">
-        Tests of radial symmetry for multivariate copulas based on the copula characteristic function
-      </div>
-      <div style="color: #586069; font-size: 0.9em; margin: 4px 0;">
-        <strong>T. Bahraoui</strong>, J.-F. Quessy
-      </div>
-      <div style="font-style: italic; color: #24292e; font-size: 0.9em;">
-        Electronic Journal of Statistics (2017)
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Profiles Bar -->
-  <div style="margin-top: 25px; padding: 12px; background: #f6f8fa; border-radius: 6px; text-align: center; font-size: 0.95em;">
-    View complete publications on 
-    <a href="https://scholar.google.com/citations?user=CPCMPW0AAAAJ&hl=en" target="_blank" style="font-weight: 600; color: #0366d6; text-decoration: none; margin-left: 5px;">Google Scholar →</a>
-    or 
-    <a href="https://www.researchgate.net/profile/Tarik-Bahraoui" target="_blank" style="font-weight: 600; color: #00ab6b; text-decoration: none; margin-left: 5px;">ResearchGate →</a>
-  </div>
-
-  <!-- Contact Section -->
-  <h3 style="border-bottom: 2px solid #eaecef; padding-bottom: 8px; margin-top: 35px;">
-    <i class="fa fa-envelope"></i> Contact
-  </h3>
-  <ul style="list-style: none; padding-left: 5px; margin-top: 10px;">
-    <li style="margin-bottom: 8px;"><strong>Email:</strong> <a href="mailto:Tarik.bahraoui@gmail.com">Tarik.bahraoui@gmail.com</a></li>
-    <li style="margin-bottom: 8px;"><strong>Affiliation:</strong> Université de Sherbrooke</li>
-    <li><strong>Location:</strong> Sherbrooke, Québec, Canada</li>
-  </ul>
-
-</div>
-
-Step 5: Commit & View
+Step 5: Save & View
 
 1.  Click Commit changes... at the top right.
-2.  Make sure "Commit directly to the tt branch" is selected.
-3.  Click Commit changes.
-4.  Wait 1 minute for GitHub Actions to complete, then hard refresh your page
-    (Ctrl + F5 or in an Incognito window).
+2.  Select "Commit directly to the tt branch" and click Commit changes.
+3.  Wait ~45 seconds for the Action to build.
+4.  Hard refresh https://tbahraoui.github.io/ (or open an Incognito window).
 
-This will give your site:
-
-  - Clean colored badges for your research topics.
-  - Neatly separated cards for each publication (title in blue, co-authors in
-    grey, journal in italics).
-  - Proper spacing, borders, and margins rather than a wall of unformatted text.
+This removes the cluttered sidebar and broken template menus, giving your
+research a clean, professional, and elegant portfolio.
