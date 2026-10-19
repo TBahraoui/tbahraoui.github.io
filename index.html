@@ -1,3 +1,15 @@
+Here is the updated index.html with both items deleted:
+
+1.  Removed: "Trois-Rivières & Sherbrooke, QC, Canada · Canadian Citizen" from
+    the header profile.
+2.  Removed: The entire Working Papers & Preprints section (leaving only your
+    published refereed journal articles).
+3.  Cleaned: Updated the footer to remove city references.
+
+Updated index.html
+
+Edit your index.html on branch tt, select all, and replace with:
+
 ---
 layout: null
 ---
@@ -82,12 +94,6 @@ layout: null
       font-size: 1.1rem;
       color: var(--primary);
       font-weight: 600;
-      margin-top: 2px;
-    }
-
-    .profile-info .meta {
-      font-size: 0.92rem;
-      color: var(--text-light);
       margin-top: 4px;
     }
 
@@ -246,15 +252,6 @@ layout: null
     }
 
     /* Publications */
-    .pub-group-title {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      margin: 24px 0 12px 0;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
     .pub-list {
       display: flex;
       flex-direction: column;
@@ -340,7 +337,6 @@ layout: null
         <div class="profile-info">
           <h1>Dr. Tarik Bahraoui</h1>
           <p class="title">Ph.D. in Mathematics · Statistics Researcher</p>
-          <p class="meta">Trois-Rivières & Sherbrooke, QC, Canada · Canadian Citizen</p>
         </div>
       </div>
 
@@ -464,42 +460,6 @@ layout: null
     <!-- Publications -->
     <section>
       <h2 class="section-title">Publications</h2>
-
-      <!-- Working Papers in Preparation -->
-      <div class="pub-group-title">Working Papers & Preprints</div>
-      <div class="pub-list" style="margin-bottom: 24px;">
-
-        <div class="pub-card">
-          <div class="pub-title">Binary Regression with Spectral Copula Structures</div>
-          <div class="pub-authors"><strong>Bahraoui, T.</strong>, Oualkacha, K., & Bouezmarni, T.</div>
-          <div class="pub-meta">
-            <span class="pub-journal">Target: Journal of the American Statistical Association (JASA)</span>
-            <span class="pub-year">In Prep</span>
-          </div>
-        </div>
-
-        <div class="pub-card">
-          <div class="pub-title">Testing for independence based on copula characteristic functions</div>
-          <div class="pub-authors"><strong>Bahraoui, T.</strong>, Nasri, B., & Rémillard, B.</div>
-          <div class="pub-meta">
-            <span class="pub-journal">Target: Annals of Statistics</span>
-            <span class="pub-year">In Prep</span>
-          </div>
-        </div>
-
-        <div class="pub-card">
-          <div class="pub-title">Two-sample comparison of copulas based on characteristic functions</div>
-          <div class="pub-authors"><strong>Bahraoui, T.</strong>, Nasri, B. R., & Rémillard, B. N.</div>
-          <div class="pub-meta">
-            <span class="pub-journal">Target: Journal of Business & Economic Statistics</span>
-            <span class="pub-year">In Prep</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Refereed Journal Articles -->
-      <div class="pub-group-title">Refereed Journal Articles</div>
       <div class="pub-list">
 
         <!-- 2024 -->
@@ -595,7 +555,7 @@ layout: null
             <span class="role-title">Ph.D. in Mathematics (Distinction: Excellent)</span>
             <span class="role-date">2013 – 2017</span>
           </div>
-          <div class="role-inst">Université de Sherbrooke · Sherbrooke, QC, Canada</div>
+          <div class="role-inst">Université de Sherbrooke · Canada</div>
           <p style="font-size: 0.88rem; color: var(--text-muted);">
             <em>Dissertation:</em> Copulas Modeling Based on Characteristic Functions and Applications<br>
             <em>Advisors:</em> Prof. Taoufik Bouezmarni & Prof. Jean-François Quessy
@@ -635,10 +595,18 @@ layout: null
 
     <!-- Footer -->
     <footer>
-      <p>© 2026 Dr. Tarik Bahraoui · Trois-Rivières, QC, Canada · Hosted on GitHub Pages</p>
+      <p>© 2026 Dr. Tarik Bahraoui · Hosted on GitHub Pages</p>
     </footer>
 
   </div>
 
 </body>
 </html>
+
+To apply:
+
+1.  Copy the code above.
+2.  Go to your repository on branch tt → open index.html → click the pencil
+    icon.
+3.  Paste the code and click Commit changes.
+4.  Wait 45 seconds and refresh https://tbahraoui.github.io/!
