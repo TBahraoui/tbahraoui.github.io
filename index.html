@@ -1,4 +1,4 @@
-
+---
 layout: null
 ---
 <!DOCTYPE html>
@@ -7,7 +7,7 @@ layout: null
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dr. Tarik Bahraoui | Ph.D. in Mathematics & Statistics Researcher</title>
-  <meta name="description" content="Academic portfolio of Dr. Tarik Bahraoui. Ph.D. in Mathematics, specializing in Copula Modeling, Nonparametric Inference, Empirical Processes, and Biostatistics.">
+  <meta name="description" content="Research portfolio of Dr. Tarik Bahraoui. Ph.D. in Mathematics, specializing in Copula Modeling, Nonparametric Inference, Empirical Processes, and Biostatistics.">
   
   <!-- Modern Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,8 +24,6 @@ layout: null
       --text-light: #64748b;
       --primary: #0284c7;
       --primary-hover: #0369a1;
-      --primary-soft: #f0f9ff;
-      --accent: #0f766e;
       --radius: 12px;
     }
 
@@ -63,8 +61,8 @@ layout: null
     }
 
     .profile-img {
-      width: 110px;
-      height: 110px;
+      width: 105px;
+      height: 105px;
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid var(--border);
@@ -79,7 +77,7 @@ layout: null
     }
 
     .profile-info .title {
-      font-size: 1.1rem;
+      font-size: 1.08rem;
       color: var(--primary);
       font-weight: 600;
       margin-top: 4px;
@@ -148,7 +146,7 @@ layout: null
     /* Text Block */
     .lead-text {
       color: var(--text-muted);
-      font-size: 1.02rem;
+      font-size: 1.05rem;
       line-height: 1.75;
       margin-bottom: 25px;
     }
@@ -173,7 +171,7 @@ layout: null
     }
 
     .topic-card h3 {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 700;
       color: var(--text);
       margin-bottom: 10px;
@@ -192,11 +190,11 @@ layout: null
       margin: 3px 2px;
     }
 
-    /* Timeline / Appointments Cards */
+    /* Appointments Cards */
     .timeline {
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 16px;
       margin-bottom: 35px;
     }
 
@@ -204,7 +202,7 @@ layout: null
       background: var(--bg);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 20px;
+      padding: 22px;
     }
 
     .timeline-header {
@@ -217,7 +215,7 @@ layout: null
 
     .role-title {
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 1.02rem;
       color: var(--text);
     }
 
@@ -228,15 +226,20 @@ layout: null
     }
 
     .role-inst {
-      color: var(--text-muted);
+      color: var(--text-light);
       font-size: 0.9rem;
-      margin: 2px 0 8px 0;
+      margin: 2px 0 10px 0;
+      font-weight: 500;
     }
 
     .timeline-card ul {
       padding-left: 20px;
       color: var(--text-muted);
-      font-size: 0.88rem;
+      font-size: 0.9rem;
+    }
+
+    .timeline-card li {
+      margin-bottom: 6px;
     }
 
     /* Publications */
@@ -275,16 +278,15 @@ layout: null
     .pub-meta {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       flex-wrap: wrap;
       font-size: 0.84rem;
-      margin-top: 6px;
+      margin-top: 8px;
     }
 
     .pub-journal {
       font-style: italic;
-      color: var(--primary);
-      font-weight: 500;
+      color: var(--text-muted);
     }
 
     .pub-year {
@@ -294,6 +296,22 @@ layout: null
       border-radius: 4px;
       font-weight: 600;
       font-size: 0.78rem;
+    }
+
+    .pub-link {
+      margin-left: auto;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .pub-link:hover {
+      color: var(--primary-hover);
+      text-decoration: underline;
     }
 
     footer {
@@ -319,7 +337,6 @@ layout: null
     <!-- Header Profile Box -->
     <header class="profile-card">
       <div class="profile-top">
-        <!-- Photo with fallback -->
         <img src="images/profile.jpg" alt="Dr. Tarik Bahraoui" class="profile-img" onerror="this.onerror=null; this.src='profile.png'; this.style.display='block';">
         
         <div class="profile-info">
@@ -354,7 +371,7 @@ layout: null
 
         <!-- ORCID -->
         <a href="https://orcid.org/0000-0003-1915-5312" target="_blank" class="btn">
-          ORCID: 0000-0003-1915-5312
+          ORCID
         </a>
 
         <!-- LinkedIn -->
@@ -369,11 +386,11 @@ layout: null
       </div>
     </header>
 
-    <!-- Bio / Overview based on CV -->
+    <!-- Professional & Simple Overview -->
     <section>
       <h2 class="section-title">Overview</h2>
       <p class="lead-text">
-        I am a mathematical statistician with a Ph.D. in Mathematics (graduated with <em>Distinction: Excellent</em>) from <strong>Université de Sherbrooke</strong>. My work advances theoretical dependence modeling, empirical process theory, and nonparametric inference while bridging rigorous mathematical foundations with practical applications in biostatistics, genomic interaction analysis, and epidemiological surveillance.
+        I am a mathematical statistician specializing in dependence modeling, nonparametric inference, and multivariate analysis. My research combines theoretical foundations—including copula theory, empirical processes, and characteristic functions—with practical statistical methodologies for biostatistics, statistical genetics, and public health surveillance. I completed my Ph.D. in Mathematics at Université de Sherbrooke with the distinction <em>Excellent</em>.
       </p>
     </section>
 
@@ -382,7 +399,7 @@ layout: null
       <h2 class="section-title">Research Interests</h2>
       <div class="topics-grid">
         <div class="topic-card">
-          <h3 style="color: #0284c7;">Statistical Theory & Methodology</h3>
+          <h3 style="color: #0284c7;">Theoretical Statistics</h3>
           <span class="badge-pill">Nonparametric Inference</span>
           <span class="badge-pill">Copula & Dependence Modeling</span>
           <span class="badge-pill">Empirical Processes</span>
@@ -391,7 +408,7 @@ layout: null
           <span class="badge-pill">High-Dimensional Statistics</span>
         </div>
         <div class="topic-card">
-          <h3 style="color: #0f766e;">Applications & Health Data</h3>
+          <h3 style="color: #0f766e;">Applications & Health Sciences</h3>
           <span class="badge-pill">Biostatistics</span>
           <span class="badge-pill">Statistical Genetics</span>
           <span class="badge-pill">Epidemiological Surveillance</span>
@@ -401,9 +418,9 @@ layout: null
       </div>
     </section>
 
-    <!-- Research Experience -->
+    <!-- Professional Research Appointments -->
     <section>
-      <h2 class="section-title">Research Appointments</h2>
+      <h2 class="section-title">Research Experience</h2>
       <div class="timeline">
 
         <div class="timeline-card">
@@ -413,8 +430,8 @@ layout: null
           </div>
           <div class="role-inst">Université du Québec à Montréal (UQAM) · Montréal, QC</div>
           <ul>
-            <li>Developed semiparametric binary regression models using spectral copula structures to analyze gene-gene interactions in high-dimensional genomic studies.</li>
-            <li>Collaborated with Prof. Karim Oualkacha and Prof. Taoufik Bouezmarni on public health biostatistics.</li>
+            <li>Engineered semiparametric binary regression models using spectral copula structures to model complex gene-gene interactions in high-dimensional genomic studies.</li>
+            <li>Collaborated with Prof. Karim Oualkacha and Prof. Taoufik Bouezmarni to bridge statistical dependence theory with computational biostatistics.</li>
           </ul>
         </div>
 
@@ -425,8 +442,8 @@ layout: null
           </div>
           <div class="role-inst">Université de Sherbrooke · Sherbrooke, QC</div>
           <ul>
-            <li>Established asymptotic theory for nonparametric change-point tests using pseudo-observations under the mentorship of Prof. Bruno N. Rémillard (HEC Montréal).</li>
-            <li>Designed multivariate monitoring algorithms directly applicable to epidemiological health surveillance systems.</li>
+            <li>Established the asymptotic theory for nonparametric change-point tests in multivariate time series using pseudo-observations (in collaboration with Prof. Bruno N. Rémillard, HEC Montréal).</li>
+            <li>Designed multivariate sequential monitoring tools with direct applications to epidemiological surveillance and public health monitoring.</li>
           </ul>
         </div>
 
@@ -437,15 +454,15 @@ layout: null
           </div>
           <div class="role-inst">University of São Paulo · São Paulo, Brazil</div>
           <ul>
-            <li>Formulated novel asymmetry measures for bivariate distributions based on characteristic functions with Prof. Nikolai Kolev.</li>
-            <li>Secured competitive international research funding through the FAPESP fellowship.</li>
+            <li>Developed a new class of bivariate asymmetry measures using copula characteristic functions alongside Prof. Nikolai Kolev.</li>
+            <li>Secured competitive international post-doctoral research funding through the São Paulo Research Foundation (FAPESP).</li>
           </ul>
         </div>
 
       </div>
     </section>
 
-    <!-- Publications -->
+    <!-- Publications with Direct Links -->
     <section>
       <h2 class="section-title">Publications</h2>
       <div class="pub-list">
@@ -457,76 +474,84 @@ layout: null
           <div class="pub-meta">
             <span class="pub-journal">Communications in Statistics - Theory and Methods, 53(18), 6513–6526</span>
             <span class="pub-year">2024</span>
+            <a href="https://doi.org/10.1080/03610926.2023.2247107" target="_blank" class="pub-link">View Paper →</a>
           </div>
         </div>
 
-        <!-- 2022 -->
+        <!-- 2022 JMVA -->
         <div class="pub-card">
           <div class="pub-title">Change-point problems for multivariate time series using pseudo-observations</div>
           <div class="pub-authors">Nasri, B. R., Rémillard, B. N., & <strong>Bahraoui, T.</strong></div>
           <div class="pub-meta">
             <span class="pub-journal">Journal of Multivariate Analysis, 187, 104857</span>
             <span class="pub-year">2022</span>
+            <a href="https://doi.org/10.1016/j.jmva.2021.104857" target="_blank" class="pub-link">View Paper →</a>
           </div>
         </div>
 
-        <!-- 2022 -->
+        <!-- 2022 SJS -->
         <div class="pub-card">
           <div class="pub-title">Tests of multivariate copula exchangeability based on Lévy measures</div>
           <div class="pub-authors"><strong>Bahraoui, T.</strong>, & Quessy, J.-F.</div>
           <div class="pub-meta">
             <span class="pub-journal">Scandinavian Journal of Statistics, 49(3), 1215–1243</span>
             <span class="pub-year">2022</span>
+            <a href="https://doi.org/10.1111/sjos.12557" target="_blank" class="pub-link">View Paper →</a>
           </div>
         </div>
 
-        <!-- 2021 -->
+        <!-- 2021 Sankhya -->
         <div class="pub-card">
           <div class="pub-title">New measure of the bivariate asymmetry</div>
           <div class="pub-authors"><strong>Bahraoui, T.</strong>, & Kolev, N.</div>
           <div class="pub-meta">
             <span class="pub-journal">Sankhya A, 83, 421–448</span>
             <span class="pub-year">2021</span>
+            <a href="https://doi.org/10.1007/s13171-020-00204-6" target="_blank" class="pub-link">View Paper →</a>
           </div>
         </div>
 
-        <!-- 2018 -->
+        <!-- 2018 SJS -->
         <div class="pub-card">
           <div class="pub-title">A family of goodness-of-fit tests for copulas based on characteristic functions</div>
           <div class="pub-authors"><strong>Bahraoui, T.</strong>, Bouezmarni, T., & Quessy, J.-F.</div>
           <div class="pub-meta">
             <span class="pub-journal">Scandinavian Journal of Statistics, 45, 301–323</span>
             <span class="pub-year">2018</span>
+            <a href="https://doi.org/10.1111/sjos.12300" target="_blank" class="pub-link">View Paper →</a>
           </div>
         </div>
 
-        <!-- 2017 -->
+        <!-- 2017 EJS -->
         <div class="pub-card">
           <div class="pub-title">Tests of radial symmetry for multivariate copulas based on the copula characteristic function</div>
           <div class="pub-authors"><strong>Bahraoui, T.</strong>, & Quessy, J.-F.</div>
           <div class="pub-meta">
             <span class="pub-journal">Electronic Journal of Statistics, 11, 2066–2096</span>
             <span class="pub-year">2017</span>
+            <a href="https://doi.org/10.1214/17-EJS1280" target="_blank" class="pub-link">View Paper →</a>
           </div>
         </div>
 
-        <!-- 2014 -->
+        <!-- 2014 JMVA -->
         <div class="pub-card">
           <div class="pub-title">Weak convergence of empirical and bootstrapped C-power processes and application to copula goodness-of-fit</div>
           <div class="pub-authors"><strong>Bahraoui, T.</strong>, & Quessy, J.-F.</div>
           <div class="pub-meta">
             <span class="pub-journal">Journal of Multivariate Analysis, 129, 16–36</span>
             <span class="pub-year">2014</span>
+            <a href="https://doi.org/10.1016/j.jmva.2014.03.018" target="_blank" class="pub-link">View Paper →</a>
           </div>
         </div>
 
-        <!-- 2013 -->
+        <!-- 2013 CJS -->
         <div class="pub-card">
           <div class="pub-title">Graphical and formal statistical tools for the symmetry of bivariate copulas</div>
           <div class="pub-authors">Quessy, J.-F., & <strong>Bahraoui, T.</strong></div>
           <div class="pub-meta">
             <span class="pub-journal">Canadian Journal of Statistics, 41, 637–656</span>
             <span class="pub-year">2013</span>
+            <a href="https://doi.org/10.1002/cjs.11195" target="_blank" class="pub-link">View Paper →</a>
           </div>
         </div>
 
@@ -590,6 +615,3 @@ layout: null
 
 </body>
 </html>
-    
-3.  Paste the code and click Commit changes.
-4.  Wait 45 seconds and refresh https://tbahraoui.github.io/!
