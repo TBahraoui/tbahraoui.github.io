@@ -6,10 +6,10 @@ layout: null
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr. Tarik Bahraoui | Mathematical Statistics</title>
-  <meta name="description" content="Research portfolio of Dr. Tarik Bahraoui, Université de Sherbrooke. Specializing in Copula Theory, Extreme Value Theory, and Statistical Inference.">
+  <title>Dr. Tarik Bahraoui | Ph.D. in Mathematics & Statistics Researcher</title>
+  <meta name="description" content="Academic portfolio of Dr. Tarik Bahraoui. Ph.D. in Mathematics, specializing in Copula Modeling, Nonparametric Inference, Empirical Processes, and Biostatistics.">
   
-  <!-- Modern Font -->
+  <!-- Modern Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,93 +17,98 @@ layout: null
   <style>
     :root {
       --bg: #ffffff;
-      --surface: #f8fafc;
-      --surface-border: #e2e8f0;
-      --text-main: #0f172a;
+      --page-bg: #f8fafc;
+      --border: #e2e8f0;
+      --text: #0f172a;
       --text-muted: #475569;
       --text-light: #64748b;
       --primary: #0284c7;
       --primary-hover: #0369a1;
-      --primary-soft: #e0f2fe;
+      --primary-soft: #f0f9ff;
       --accent: #0f766e;
       --radius: 12px;
-      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #fafbfc;
-      color: var(--text-main);
+      background-color: var(--page-bg);
+      color: var(--text);
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
 
     .container {
-      max-width: 860px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 50px 24px 80px 24px;
+      padding: 45px 20px 80px 20px;
     }
 
     /* Header Profile Card */
     .profile-card {
       background: var(--bg);
-      border: 1px solid var(--surface-border);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 36px;
-      box-shadow: var(--shadow-sm);
-      margin-bottom: 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      margin-bottom: 35px;
     }
 
-    .profile-header {
+    .profile-top {
       display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
+      align-items: center;
       gap: 24px;
       flex-wrap: wrap;
     }
 
-    .name-title h1 {
+    .profile-img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--border);
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.06);
+    }
+
+    .profile-info h1 {
       font-size: 2rem;
       font-weight: 700;
-      color: var(--text-main);
       letter-spacing: -0.02em;
+      color: var(--text);
     }
 
-    .name-title p.affiliation {
-      font-size: 1.05rem;
+    .profile-info .title {
+      font-size: 1.1rem;
       color: var(--primary);
-      font-weight: 500;
-      margin-top: 4px;
-    }
-
-    .name-title p.sub {
-      font-size: 0.95rem;
-      color: var(--text-muted);
+      font-weight: 600;
       margin-top: 2px;
     }
 
-    /* Links / Buttons */
+    .profile-info .meta {
+      font-size: 0.92rem;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+
+    /* Action Links & Badges */
     .links-bar {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 8px;
+      gap: 8px;
+      margin-top: 22px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      background: var(--surface);
+      gap: 7px;
+      background: var(--page-bg);
       color: var(--text-muted);
-      border: 1px solid var(--surface-border);
-      padding: 8px 14px;
+      border: 1px solid var(--border);
+      padding: 7px 13px;
       border-radius: 8px;
       font-size: 0.85rem;
       font-weight: 500;
@@ -113,20 +118,18 @@ layout: null
 
     .btn:hover {
       background: var(--bg);
-      color: var(--text-main);
+      color: var(--primary);
       border-color: #cbd5e1;
-      box-shadow: var(--shadow-sm);
     }
 
     .btn-primary {
       background: var(--primary);
-      color: #fff;
+      color: #fff !important;
       border-color: var(--primary);
     }
 
     .btn-primary:hover {
       background: var(--primary-hover);
-      color: #fff;
     }
 
     /* Section Titles */
@@ -134,8 +137,8 @@ layout: null
       font-size: 1.25rem;
       font-weight: 700;
       letter-spacing: -0.01em;
-      color: var(--text-main);
-      margin-bottom: 20px;
+      color: var(--text);
+      margin: 40px 0 18px 0;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -145,96 +148,152 @@ layout: null
       content: "";
       flex: 1;
       height: 1px;
-      background: var(--surface-border);
+      background: var(--border);
     }
 
-    /* About Section */
-    .about-text {
+    /* Text Block */
+    .lead-text {
       color: var(--text-muted);
       font-size: 1.02rem;
       line-height: 1.75;
-      margin-bottom: 40px;
+      margin-bottom: 25px;
     }
 
-    /* Research Cards */
-    .grid {
+    /* Research Interests Badges */
+    .topics-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 16px;
-      margin-bottom: 45px;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      margin-bottom: 30px;
     }
 
-    .card {
+    @media (min-width: 650px) {
+      .topics-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .topic-card {
       background: var(--bg);
-      border: 1px solid var(--surface-border);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 20px;
-      transition: all 0.2s ease;
     }
 
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-      border-color: #cbd5e1;
-    }
-
-    .card h3 {
+    .topic-card h3 {
       font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--text-main);
-      margin-bottom: 8px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
-    .card p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.5;
+    .badge-pill {
+      display: inline-block;
+      background: #f1f5f9;
+      color: #334155;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin: 3px 2px;
     }
 
-    /* Publication List */
-    .publication-list {
+    /* Timeline / Appointments Cards */
+    .timeline {
       display: flex;
       flex-direction: column;
-      gap: 16px;
-      margin-bottom: 45px;
+      gap: 14px;
+      margin-bottom: 35px;
+    }
+
+    .timeline-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .role-title {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    .role-date {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .role-inst {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin: 2px 0 8px 0;
+    }
+
+    .timeline-card ul {
+      padding-left: 20px;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    /* Publications */
+    .pub-group-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin: 24px 0 12px 0;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .pub-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
     }
 
     .pub-card {
       background: var(--bg);
-      border: 1px solid var(--surface-border);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 22px;
-      transition: border-color 0.15s ease;
+      padding: 20px;
+      transition: all 0.15s ease;
     }
 
     .pub-card:hover {
-      border-color: #94a3b8;
+      border-color: #cbd5e1;
+      box-shadow: 0 4px 6px -2px rgba(0,0,0,0.04);
     }
 
     .pub-title {
       font-size: 1rem;
       font-weight: 600;
-      color: var(--text-main);
+      color: var(--text);
       line-height: 1.45;
-      margin-bottom: 6px;
     }
 
     .pub-authors {
       font-size: 0.88rem;
       color: var(--text-muted);
-      margin-bottom: 6px;
-    }
-
-    .pub-authors strong {
-      color: var(--text-main);
+      margin: 5px 0;
     }
 
     .pub-meta {
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
-      gap: 10px;
-      font-size: 0.82rem;
+      gap: 8px;
+      flex-wrap: wrap;
+      font-size: 0.84rem;
+      margin-top: 6px;
     }
 
     .pub-journal {
@@ -243,22 +302,22 @@ layout: null
       font-weight: 500;
     }
 
-    .pub-badge {
-      background: var(--surface);
-      border: 1px solid var(--surface-border);
-      padding: 2px 8px;
+    .pub-year {
+      background: #e2e8f0;
+      color: #334155;
+      padding: 1px 7px;
       border-radius: 4px;
-      color: var(--text-light);
-      font-weight: 500;
+      font-weight: 600;
+      font-size: 0.78rem;
     }
 
-    /* Footer */
     footer {
       text-align: center;
-      padding-top: 30px;
-      border-top: 1px solid var(--surface-border);
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
       font-size: 0.85rem;
       color: var(--text-light);
+      margin-top: 60px;
     }
 
     svg {
@@ -272,111 +331,303 @@ layout: null
 
   <div class="container">
 
-    <!-- Top Profile Box -->
+    <!-- Header Profile Box -->
     <header class="profile-card">
-      <div class="profile-header">
-        <div class="name-title">
+      <div class="profile-top">
+        <!-- Photo with fallback -->
+        <img src="images/profile.jpg" alt="Dr. Tarik Bahraoui" class="profile-img" onerror="this.onerror=null; this.src='profile.png'; this.style.display='block';">
+        
+        <div class="profile-info">
           <h1>Dr. Tarik Bahraoui</h1>
-          <p class="affiliation">Researcher in Mathematical Statistics</p>
-          <p class="sub">Université de Sherbrooke · Québec, Canada</p>
+          <p class="title">Ph.D. in Mathematics · Statistics Researcher</p>
+          <p class="meta">Trois-Rivières & Sherbrooke, QC, Canada · Canadian Citizen</p>
         </div>
       </div>
 
       <!-- Quick Action Buttons -->
       <div class="links-bar">
-        <a href="mailto:Tarik.bahraoui@gmail.com" class="btn btn-primary">
-          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          Email Me
+        <!-- CV PDF Link -->
+        <a href="files/cv.pdf" target="_blank" class="btn btn-primary">
+          <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          Download CV (PDF)
         </a>
+
+        <!-- Email -->
+        <a href="mailto:tarik.bahraoui@gmail.com" class="btn">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Email
+        </a>
+
+        <!-- Google Scholar -->
         <a href="https://scholar.google.com/citations?user=CPCMPW0AAAAJ&hl=en" target="_blank" class="btn">
-          <svg viewBox="0 0 24 24"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4 3.18v6.82h3v-4.48L12 19l8-6.36V7.48L12 0z"/></svg>
           Google Scholar
         </a>
+
+        <!-- ResearchGate -->
         <a href="https://www.researchgate.net/profile/Tarik-Bahraoui" target="_blank" class="btn">
-          <svg viewBox="0 0 24 24"><path d="M19.54 0c1.356 0 2.46 1.104 2.46 2.472v21.528l-5.69-3.08-5.688 3.08V2.472C10.622 1.104 11.726 0 13.082 0h6.458z"/></svg>
           ResearchGate
         </a>
+
+        <!-- ORCID -->
+        <a href="https://orcid.org/0000-0003-1915-5312" target="_blank" class="btn">
+          ORCID: 0000-0003-1915-5312
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/tarik-bahraoui/" target="_blank" class="btn">
+          LinkedIn
+        </a>
+
+        <!-- GitHub -->
         <a href="https://github.com/tbahraoui" target="_blank" class="btn">
-          <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           GitHub
         </a>
       </div>
     </header>
 
-    <!-- About Me -->
+    <!-- Bio / Overview based on CV -->
     <section>
       <h2 class="section-title">Overview</h2>
-      <p class="about-text">
-        I hold a Ph.D. in Mathematics and Statistics from <strong>Université de Sherbrooke</strong>. My work focuses on mathematical statistics, specifically the development of semiparametric and nonparametric testing methodologies, multivariate dependence structures, and limit theorems for complex stochastic processes. I regularly publish in leading international statistics journals including the <em>Journal of Multivariate Analysis</em> and the <em>Scandinavian Journal of Statistics</em>.
+      <p class="lead-text">
+        I am a mathematical statistician with a Ph.D. in Mathematics (graduated with <em>Distinction: Excellent</em>) from <strong>Université de Sherbrooke</strong>. My work advances theoretical dependence modeling, empirical process theory, and nonparametric inference while bridging rigorous mathematical foundations with practical applications in biostatistics, genomic interaction analysis, and epidemiological surveillance.
       </p>
     </section>
 
-    <!-- Research Areas -->
+    <!-- Research Interests -->
     <section>
-      <h2 class="section-title">Research Focus Areas</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Copulas & Dependence</h3>
-          <p>Multivariate copula exchangeability, Bernstein copulas, radial symmetry tests, and directional asymmetry modeling.</p>
+      <h2 class="section-title">Research Interests</h2>
+      <div class="topics-grid">
+        <div class="topic-card">
+          <h3 style="color: #0284c7;">Statistical Theory & Methodology</h3>
+          <span class="badge-pill">Nonparametric Inference</span>
+          <span class="badge-pill">Copula & Dependence Modeling</span>
+          <span class="badge-pill">Empirical Processes</span>
+          <span class="badge-pill">Characteristic Functions</span>
+          <span class="badge-pill">Change-point Analysis</span>
+          <span class="badge-pill">High-Dimensional Statistics</span>
         </div>
-        <div class="card">
-          <h3>Extreme Value Theory</h3>
-          <p>Tail copula characteristic functions (TCCF), extremal dependence indices, and asymptotic properties of extreme joint events.</p>
+        <div class="topic-card">
+          <h3 style="color: #0f766e;">Applications & Health Data</h3>
+          <span class="badge-pill">Biostatistics</span>
+          <span class="badge-pill">Statistical Genetics</span>
+          <span class="badge-pill">Epidemiological Surveillance</span>
+          <span class="badge-pill">Machine Learning for Health Data</span>
+          <span class="badge-pill">Survival Analysis</span>
         </div>
-        <div class="card">
-          <h3>Time Series & ML</h3>
-          <p>Nonparametric change-point detection in dependent multivariate time series using pseudo-observations and rank statistics.</p>
+      </div>
+    </section>
+
+    <!-- Research Experience -->
+    <section>
+      <h2 class="section-title">Research Appointments</h2>
+      <div class="timeline">
+
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <span class="role-title">Postdoctoral Researcher</span>
+            <span class="role-date">2021 – 2022</span>
+          </div>
+          <div class="role-inst">Université du Québec à Montréal (UQAM) · Montréal, QC</div>
+          <ul>
+            <li>Developed semiparametric binary regression models using spectral copula structures to analyze gene-gene interactions in high-dimensional genomic studies.</li>
+            <li>Collaborated with Prof. Karim Oualkacha and Prof. Taoufik Bouezmarni on public health biostatistics.</li>
+          </ul>
         </div>
-        <div class="card">
-          <h3>Empirical Process Theory</h3>
-          <p>Degenerate U- and V-statistics, functional central limit theorems, and multiplier bootstrap validation for weak dependence.</p>
+
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <span class="role-title">Postdoctoral Researcher</span>
+            <span class="role-date">2020 – 2021</span>
+          </div>
+          <div class="role-inst">Université de Sherbrooke · Sherbrooke, QC</div>
+          <ul>
+            <li>Established asymptotic theory for nonparametric change-point tests using pseudo-observations under the mentorship of Prof. Bruno N. Rémillard (HEC Montréal).</li>
+            <li>Designed multivariate monitoring algorithms directly applicable to epidemiological health surveillance systems.</li>
+          </ul>
         </div>
+
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <span class="role-title">FAPESP Postdoctoral Fellow</span>
+            <span class="role-date">2018 – 2019</span>
+          </div>
+          <div class="role-inst">University of São Paulo · São Paulo, Brazil</div>
+          <ul>
+            <li>Formulated novel asymmetry measures for bivariate distributions based on characteristic functions with Prof. Nikolai Kolev.</li>
+            <li>Secured competitive international research funding through the FAPESP fellowship.</li>
+          </ul>
+        </div>
+
       </div>
     </section>
 
     <!-- Publications -->
     <section>
-      <h2 class="section-title">Selected Publications</h2>
-      <div class="publication-list">
+      <h2 class="section-title">Publications</h2>
 
+      <!-- Working Papers in Preparation -->
+      <div class="pub-group-title">Working Papers & Preprints</div>
+      <div class="pub-list" style="margin-bottom: 24px;">
+
+        <div class="pub-card">
+          <div class="pub-title">Binary Regression with Spectral Copula Structures</div>
+          <div class="pub-authors"><strong>Bahraoui, T.</strong>, Oualkacha, K., & Bouezmarni, T.</div>
+          <div class="pub-meta">
+            <span class="pub-journal">Target: Journal of the American Statistical Association (JASA)</span>
+            <span class="pub-year">In Prep</span>
+          </div>
+        </div>
+
+        <div class="pub-card">
+          <div class="pub-title">Testing for independence based on copula characteristic functions</div>
+          <div class="pub-authors"><strong>Bahraoui, T.</strong>, Nasri, B., & Rémillard, B.</div>
+          <div class="pub-meta">
+            <span class="pub-journal">Target: Annals of Statistics</span>
+            <span class="pub-year">In Prep</span>
+          </div>
+        </div>
+
+        <div class="pub-card">
+          <div class="pub-title">Two-sample comparison of copulas based on characteristic functions</div>
+          <div class="pub-authors"><strong>Bahraoui, T.</strong>, Nasri, B. R., & Rémillard, B. N.</div>
+          <div class="pub-meta">
+            <span class="pub-journal">Target: Journal of Business & Economic Statistics</span>
+            <span class="pub-year">In Prep</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Refereed Journal Articles -->
+      <div class="pub-group-title">Refereed Journal Articles</div>
+      <div class="pub-list">
+
+        <!-- 2024 -->
+        <div class="pub-card">
+          <div class="pub-title">Bernstein copula characteristic function</div>
+          <div class="pub-authors"><strong>Bahraoui, T.</strong></div>
+          <div class="pub-meta">
+            <span class="pub-journal">Communications in Statistics - Theory and Methods, 53(18), 6513–6526</span>
+            <span class="pub-year">2024</span>
+          </div>
+        </div>
+
+        <!-- 2022 -->
         <div class="pub-card">
           <div class="pub-title">Change-point problems for multivariate time series using pseudo-observations</div>
-          <div class="pub-authors">B. R. Nasri, B. Rémillard, <strong>T. Bahraoui</strong></div>
+          <div class="pub-authors">Nasri, B. R., Rémillard, B. N., & <strong>Bahraoui, T.</strong></div>
           <div class="pub-meta">
-            <span class="pub-journal">Journal of Multivariate Analysis</span>
-            <span class="pub-badge">2022</span>
-            <span class="pub-badge">Methodology</span>
+            <span class="pub-journal">Journal of Multivariate Analysis, 187, 104857</span>
+            <span class="pub-year">2022</span>
           </div>
         </div>
 
+        <!-- 2022 -->
         <div class="pub-card">
           <div class="pub-title">Tests of multivariate copula exchangeability based on Lévy measures</div>
-          <div class="pub-authors"><strong>T. Bahraoui</strong>, J.-F. Quessy</div>
+          <div class="pub-authors"><strong>Bahraoui, T.</strong>, & Quessy, J.-F.</div>
           <div class="pub-meta">
-            <span class="pub-journal">Scandinavian Journal of Statistics</span>
-            <span class="pub-badge">2021</span>
-            <span class="pub-badge">Copula Theory</span>
+            <span class="pub-journal">Scandinavian Journal of Statistics, 49(3), 1215–1243</span>
+            <span class="pub-year">2022</span>
           </div>
         </div>
 
+        <!-- 2021 -->
         <div class="pub-card">
-          <div class="pub-title">New Measure of the Bivariate Asymmetry</div>
-          <div class="pub-authors"><strong>T. Bahraoui</strong>, N. Kolev</div>
+          <div class="pub-title">New measure of the bivariate asymmetry</div>
+          <div class="pub-authors"><strong>Bahraoui, T.</strong>, & Kolev, N.</div>
           <div class="pub-meta">
-            <span class="pub-journal">Sankhya: The Indian Journal of Statistics (Series A)</span>
-            <span class="pub-badge">2020</span>
-            <span class="pub-badge">Bivariate Analysis</span>
+            <span class="pub-journal">Sankhya A, 83, 421–448</span>
+            <span class="pub-year">2021</span>
           </div>
         </div>
 
+        <!-- 2018 -->
+        <div class="pub-card">
+          <div class="pub-title">A family of goodness-of-fit tests for copulas based on characteristic functions</div>
+          <div class="pub-authors"><strong>Bahraoui, T.</strong>, Bouezmarni, T., & Quessy, J.-F.</div>
+          <div class="pub-meta">
+            <span class="pub-journal">Scandinavian Journal of Statistics, 45, 301–323</span>
+            <span class="pub-year">2018</span>
+          </div>
+        </div>
+
+        <!-- 2017 -->
         <div class="pub-card">
           <div class="pub-title">Tests of radial symmetry for multivariate copulas based on the copula characteristic function</div>
-          <div class="pub-authors"><strong>T. Bahraoui</strong>, J.-F. Quessy</div>
+          <div class="pub-authors"><strong>Bahraoui, T.</strong>, & Quessy, J.-F.</div>
           <div class="pub-meta">
-            <span class="pub-journal">Electronic Journal of Statistics</span>
-            <span class="pub-badge">2017</span>
-            <span class="pub-badge">Hypothesis Testing</span>
+            <span class="pub-journal">Electronic Journal of Statistics, 11, 2066–2096</span>
+            <span class="pub-year">2017</span>
           </div>
+        </div>
+
+        <!-- 2014 -->
+        <div class="pub-card">
+          <div class="pub-title">Weak convergence of empirical and bootstrapped C-power processes and application to copula goodness-of-fit</div>
+          <div class="pub-authors"><strong>Bahraoui, T.</strong>, & Quessy, J.-F.</div>
+          <div class="pub-meta">
+            <span class="pub-journal">Journal of Multivariate Analysis, 129, 16–36</span>
+            <span class="pub-year">2014</span>
+          </div>
+        </div>
+
+        <!-- 2013 -->
+        <div class="pub-card">
+          <div class="pub-title">Graphical and formal statistical tools for the symmetry of bivariate copulas</div>
+          <div class="pub-authors">Quessy, J.-F., & <strong>Bahraoui, T.</strong></div>
+          <div class="pub-meta">
+            <span class="pub-journal">Canadian Journal of Statistics, 41, 637–656</span>
+            <span class="pub-year">2013</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <h2 class="section-title">Education</h2>
+      <div class="timeline">
+
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <span class="role-title">Ph.D. in Mathematics (Distinction: Excellent)</span>
+            <span class="role-date">2013 – 2017</span>
+          </div>
+          <div class="role-inst">Université de Sherbrooke · Sherbrooke, QC, Canada</div>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">
+            <em>Dissertation:</em> Copulas Modeling Based on Characteristic Functions and Applications<br>
+            <em>Advisors:</em> Prof. Taoufik Bouezmarni & Prof. Jean-François Quessy
+          </p>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <span class="role-title">M.Sc. in Applied Mathematics (Distinction: Excellent)</span>
+            <span class="role-date">2010 – 2013</span>
+          </div>
+          <div class="role-inst">Université du Québec à Trois-Rivières (UQTR) · Canada</div>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">
+            <em>Thesis:</em> C-power Processes: Goodness-of-fit and Symmetry Tests in Copulas Modeling<br>
+            <em>Advisor:</em> Prof. Jean-François Quessy
+          </p>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <span class="role-title">DEA in Biostatistics</span>
+            <span class="role-date">2006 – 2008</span>
+          </div>
+          <div class="role-inst">Université de Montpellier II · France</div>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <span class="role-title">DESS in Computer Engineering & Applied Mathematics</span>
+            <span class="role-date">2004 – 2005</span>
+          </div>
+          <div class="role-inst">Université de Pau · France</div>
         </div>
 
       </div>
@@ -384,7 +635,7 @@ layout: null
 
     <!-- Footer -->
     <footer>
-      <p>© 2026 Dr. Tarik Bahraoui · Hosted on GitHub Pages · Sherbrooke, QC</p>
+      <p>© 2026 Dr. Tarik Bahraoui · Trois-Rivières, QC, Canada · Hosted on GitHub Pages</p>
     </footer>
 
   </div>
