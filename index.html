@@ -1,49 +1,143 @@
+The reason the page looked cumbersome and messy is that Jekyll does not format
+Markdown symbols (#, ###, *, **) cleanly inside an .html file—it treats them as
+raw plain text and dumps everything together without proper spacing or structure
+[1].
+
+Here is a clean, organized, and professionally styled index.html. It uses proper
+HTML and the built-in components of your Academic Pages theme (cards, research
+pill badges, and publication buttons) so everything is neat and visually
+separated.
+
+Step: Replace index.html with this organized version
+
+1.  Go to your repository on GitHub:
+    https://github.com/tbahraoui/tbahraoui.github.io
+2.  On branch tt, click on index.html.
+3.  Click the Pencil icon (Edit this file).
+4.  Replace everything with this code:
+
 ---
 layout: single
 author_profile: true
 permalink: /
 ---
 
-# About Me
+<div style="font-family: inherit; line-height: 1.6;">
 
-I am a researcher with a Ph.D. in Mathematics / Statistics from **Université de Sherbrooke**, Québec, Canada.
+  <!-- Hero / Introduction -->
+  <div style="background: rgba(0,0,0,0.03); border-left: 4px solid #2b7489; padding: 15px 20px; border-radius: 4px; margin-bottom: 25px;">
+    <h2 style="margin-top: 0; color: #2b7489;">About Me</h2>
+    <p style="margin-bottom: 0;">
+      I am a mathematical statistician with a Ph.D. from <strong>Université de Sherbrooke</strong>, Québec, Canada. 
+      My research focuses on developing robust nonparametric and semiparametric inference techniques for complex multivariate data, with applications across risk modeling, econometrics, and data science.
+    </p>
+  </div>
 
-My research lies at the intersection of statistical theory, dependence modeling, and data science, focusing on developing robust nonparametric and semiparametric inference techniques for complex multivariate data.
+  <!-- Research Interests (Pills / Badges) -->
+  <h3 style="border-bottom: 2px solid #eaecef; padding-bottom: 8px; margin-top: 30px;">
+    <i class="fa fa-search"></i> Research Interests
+  </h3>
+  
+  <div style="display: flex; flex-wrap: wrap; gap: 8px; margin: 15px 0 25px 0;">
+    <span style="background: #e1f5fe; color: #0277bd; padding: 6px 14px; border-radius: 20px; font-weight: 500; font-size: 0.9em;">Dependence Modeling & Copulas</span>
+    <span style="background: #e8f5e9; color: #2e7d32; padding: 6px 14px; border-radius: 20px; font-weight: 500; font-size: 0.9em;">Extreme Value Theory</span>
+    <span style="background: #f3e5f5; color: #7b1fa2; padding: 6px 14px; border-radius: 20px; font-weight: 500; font-size: 0.9em;">Empirical Process Theory</span>
+    <span style="background: #fff3e0; color: #e65100; padding: 6px 14px; border-radius: 20px; font-weight: 500; font-size: 0.9em;">Multivariate Time Series</span>
+    <span style="background: #ede7f6; color: #4527a0; padding: 6px 14px; border-radius: 20px; font-weight: 500; font-size: 0.9em;">Statistical Machine Learning</span>
+  </div>
 
----
+  <!-- Selected Publications Cards -->
+  <h3 style="border-bottom: 2px solid #eaecef; padding-bottom: 8px; margin-top: 35px;">
+    <i class="fa fa-book"></i> Selected Publications
+  </h3>
 
-### Research Interests
+  <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 15px;">
 
-* **Dependence Modeling & Copulas:** Multivariate copula theory, Bernstein copulas, symmetry testing, and rank statistics.
-* **Extreme Value Theory:** Tail dependence, tail copula characteristic functions (TCCF), and directional asymmetry in extreme events.
-* **Empirical Process Theory:** Functional central limit theorems, degenerate $U$- and $V$-statistics, and bootstrap consistency under weak dependence.
-* **Time Series & Machine Learning:** Change-point detection in multivariate time series using pseudo-observations and nonparametric methods.
+    <!-- Publication 1 -->
+    <div style="border: 1px solid #e1e4e8; border-radius: 8px; padding: 16px; background-color: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+      <div style="font-weight: 600; font-size: 1.05em; color: #0366d6;">
+        Change-point problems for multivariate time series using pseudo-observations
+      </div>
+      <div style="color: #586069; font-size: 0.9em; margin: 4px 0;">
+        B. R. Nasri, B. Rémillard, <strong>T. Bahraoui</strong>
+      </div>
+      <div style="font-style: italic; color: #24292e; font-size: 0.9em;">
+        Journal of Multivariate Analysis (2022)
+      </div>
+    </div>
 
----
+    <!-- Publication 2 -->
+    <div style="border: 1px solid #e1e4e8; border-radius: 8px; padding: 16px; background-color: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+      <div style="font-weight: 600; font-size: 1.05em; color: #0366d6;">
+        Tests of multivariate copula exchangeability based on Lévy measures
+      </div>
+      <div style="color: #586069; font-size: 0.9em; margin: 4px 0;">
+        <strong>T. Bahraoui</strong>, J.-F. Quessy
+      </div>
+      <div style="font-style: italic; color: #24292e; font-size: 0.9em;">
+        Scandinavian Journal of Statistics (2021)
+      </div>
+    </div>
 
-### Selected Publications
+    <!-- Publication 3 -->
+    <div style="border: 1px solid #e1e4e8; border-radius: 8px; padding: 16px; background-color: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+      <div style="font-weight: 600; font-size: 1.05em; color: #0366d6;">
+        New Measure of the Bivariate Asymmetry
+      </div>
+      <div style="color: #586069; font-size: 0.9em; margin: 4px 0;">
+        <strong>T. Bahraoui</strong>, N. Kolev
+      </div>
+      <div style="font-style: italic; color: #24292e; font-size: 0.9em;">
+        Sankhya: The Indian Journal of Statistics, Series A (2020)
+      </div>
+    </div>
 
-* **Change-point problems for multivariate time series using pseudo-observations**  
-  B. R. Nasri, B. Rémillard, and **T. Bahraoui**  
-  *Journal of Multivariate Analysis*, 2022.
+    <!-- Publication 4 -->
+    <div style="border: 1px solid #e1e4e8; border-radius: 8px; padding: 16px; background-color: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+      <div style="font-weight: 600; font-size: 1.05em; color: #0366d6;">
+        Tests of radial symmetry for multivariate copulas based on the copula characteristic function
+      </div>
+      <div style="color: #586069; font-size: 0.9em; margin: 4px 0;">
+        <strong>T. Bahraoui</strong>, J.-F. Quessy
+      </div>
+      <div style="font-style: italic; color: #24292e; font-size: 0.9em;">
+        Electronic Journal of Statistics (2017)
+      </div>
+    </div>
 
-* **Tests of multivariate copula exchangeability based on Lévy measures**  
-  **T. Bahraoui** and J.-F. Quessy  
-  *Scandinavian Journal of Statistics*, 2021.
+  </div>
 
-* **New Measure of the Bivariate Asymmetry**  
-  **T. Bahraoui** and N. Kolev  
-  *Sankhya: The Indian Journal of Statistics (Series A)*, 2020.
+  <!-- Profiles Bar -->
+  <div style="margin-top: 25px; padding: 12px; background: #f6f8fa; border-radius: 6px; text-align: center; font-size: 0.95em;">
+    View complete publications on 
+    <a href="https://scholar.google.com/citations?user=CPCMPW0AAAAJ&hl=en" target="_blank" style="font-weight: 600; color: #0366d6; text-decoration: none; margin-left: 5px;">Google Scholar →</a>
+    or 
+    <a href="https://www.researchgate.net/profile/Tarik-Bahraoui" target="_blank" style="font-weight: 600; color: #00ab6b; text-decoration: none; margin-left: 5px;">ResearchGate →</a>
+  </div>
 
-* **Tests of radial symmetry for multivariate copulas based on the copula characteristic function**  
-  **T. Bahraoui** and J.-F. Quessy  
-  *Electronic Journal of Statistics*, 2017.
+  <!-- Contact Section -->
+  <h3 style="border-bottom: 2px solid #eaecef; padding-bottom: 8px; margin-top: 35px;">
+    <i class="fa fa-envelope"></i> Contact
+  </h3>
+  <ul style="list-style: none; padding-left: 5px; margin-top: 10px;">
+    <li style="margin-bottom: 8px;"><strong>Email:</strong> <a href="mailto:Tarik.bahraoui@gmail.com">Tarik.bahraoui@gmail.com</a></li>
+    <li style="margin-bottom: 8px;"><strong>Affiliation:</strong> Université de Sherbrooke</li>
+    <li><strong>Location:</strong> Sherbrooke, Québec, Canada</li>
+  </ul>
 
-*(Full list of publications available on [Google Scholar](https://scholar.google.com/citations?user=CPCMPW0AAAAJ&hl=en) and [ResearchGate](https://www.researchgate.net/profile/Tarik-Bahraoui).)*
+</div>
 
----
+Step 5: Commit & View
 
-### Contact
+1.  Click Commit changes... at the top right.
+2.  Make sure "Commit directly to the tt branch" is selected.
+3.  Click Commit changes.
+4.  Wait 1 minute for GitHub Actions to complete, then hard refresh your page
+    (Ctrl + F5 or in an Incognito window).
 
-* **Email:** [Tarik.bahraoui@gmail.com](mailto:Tarik.bahraoui@gmail.com)
-* **Location:** Sherbrooke, Québec, Canada
+This will give your site:
+
+  - Clean colored badges for your research topics.
+  - Neatly separated cards for each publication (title in blue, co-authors in
+    grey, journal in italics).
+  - Proper spacing, borders, and margins rather than a wall of unformatted text.
